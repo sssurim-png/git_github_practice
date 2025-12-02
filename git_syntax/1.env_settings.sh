@@ -1,0 +1,46 @@
+# . 은 모든 변경 사항을 의미. 특정파일마나 add하는 것도 가능
+# add는 staging area로 변경사항을 이동
+git add .
+
+#commit 은 변경이력(commitId) 발생.
+#commit은 staging area는 비워지고, local repository에 변경이력 발생
+git commit-m "메세지"
+
+# 로컬에 존재하ㄴ는 브랜치를 가지고 push
+git push origin 브랜치명
+
+# git의 인증방법 2가지
+# 1. 웹을 통한 인증(토큰 간접 발급) 2.직접토큰 발급
+
+public: 읽기o, 쓰기x(권한체크)
+=>내 repository
+private: 읽기o, 쓰기o
+
+
+로컬에서 토큰을 발급 받아야함 
+1. 수동으로 발급
+2. push하면 로그인했냐면서 자동으로 발급(oauth방식)
+
+#사용자지정
+git config --global user.name"유저명"
+git config --global user.name"email명"
+#git 설정정보 조회
+git config --list
+
+#git프로젝트 생성방법 2가지
+1. 회사에 처음 입사했을 때 =>clone만
+2. 내 개인프로젝트를 로컬에서 진행하다가 업로드 하는 경우
+ 2-1)github repo생성 -> clone만
+ 2-2)github repo생성 + 내 로컬에 프로젝트를 github upload
+ #1.원격에서 repo생성 후 clone
+ #2.로컬에 이미 만들어진 프로젝트 github에 업로드
+ #2-1 git init
+2-2)원격지 주소를 추가
+ git remote add origin 원격지 주소
+
+
+원격 끊겼어도 정보 로컬에 남아있는다(.git)
+ 원격정보
+ 히스토리(commit이력)
+ =>git삭제 시 -> 다시만들면 git재생성(깡통)
+ 
