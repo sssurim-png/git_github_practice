@@ -6,4 +6,4 @@
 test_folder/import_config.yml
 
 #한번 add 또는 commit 된 파일은 다시 ignore처리되지 않음
-test_folder/test1.txt
+test_folder/test1_txt
