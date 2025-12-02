@@ -22,8 +22,8 @@ private: 읽기o, 쓰기o
 2. push하면 로그인했냐면서 자동으로 발급(oauth방식)
 
 #사용자지정
-git config --global user.name"유저명"
-git config --global user.name"email명"
+git config --global user.name "유저명"
+git config --global user.name "email명"
 #git 설정정보 조회
 git config --list
 
@@ -48,11 +48,17 @@ git config --list
 -원격지 주소 -clone 받으면 남의 주소를 내 주소로 변경하거나(히스토리도 남기고) 기존에 있는거 삭제
 -히스토리  
 
- #다른 repo에서 clone을 받아 나의repo로 옮기기
- #1/커밍이력 그대로 가져가기
+**남의 레포 가져오기
+ #다른 repo에서 clone을 받아 나의repo로 옮기기 //위치는  .git에서 하기 꼭
+ #1.커밋이력 그대로 가져가기
+ git clone 남레포주소 
+ git remote set-url origin 내레포주소 #원격지 주소 변경
+ git push origin main
 
- git remote  set-url origin 레포주소 #원격지 주소 변경
- #커밍 이력 없이 가져가기 
-
+ #2.커밍 이력 없이 가져가기
+ #.git폴더 삭제
+ git init  // 깡통만들기!! 내꺼로 .git 바꾸기 위해서
+ git remote add origin 내 원격지 주소 //신규추가
  git checkout -b main #main브랜치 생성 및 변경
+ #git add, git commit, git push작업진행
  

@@ -1,0 +1,5 @@
+test_folder/import_config.yml
+
+#올리지 않아야할 파일
+1.빌드 파일x
+2.중요값 (비밀번호, 암호...)
