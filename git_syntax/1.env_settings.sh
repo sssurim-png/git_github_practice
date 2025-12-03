@@ -55,7 +55,7 @@ git config --list
  git remote set-url origin 내레포주소 #원격지 주소 변경
  git push origin main
 
- #2.커밍 이력 없이 가져가기
+ #2.커밍 이력 없이 가져가기 clone
  #.git폴더 삭제
  git init  // 깡통만들기!! 내꺼로 .git 바꾸기 위해서
  git remote add origin 내 원격지 주소 //신규추가
