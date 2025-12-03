@@ -65,9 +65,21 @@ git reset head
 #이미 push commit사항을  되돌리는 새로운 commit 생성 (지워지는 것이 아님)
 git revert 커밋ID
 
+#작업 중인 사항을 임시 저장
+git stash
+#임시 저장한 작업사항을 다시 적용
+git stash pop
+#저장한 작업목록 조회
+git stash list
+#저장한 목록 전체 삭제
+git stash clear
 
-
-#원격repo에 해당 tag의 release생성
+#가장 최신의 commitID에 tag가 명시
+git tag 태그버전명(v1.10.4)
+#원격 repo에 해당 tag의 release 생성
+git push origin 태그버전명
+#태그 목록 조회
+git tag
 
 
 # 브랜치 생성
@@ -88,8 +100,9 @@ git branch -D 브랜치명
 2.main checkout 및 pull
 3.feat브랜치 생성
 4.commit ID 2개 정도 임의로 생성
-5origin/feat1에 push (코드 작업 후)
-6.PR생성해서 main merge
+5.origin/feat1에 push (코드 작업 후)
+6.한번 쓴 branch는 가급적 다시 사용하지 말 것   ----------->
+7.PR생성해서 main merge
 //로컬의 main브랜치에서는 작업하지 않는다 main에서 main으로 push하지 않는다. 
  사이드 branch에서 원격origin/feat으로 push.
  원격 origin/feat에서 원격main branch에 PR로 merge
@@ -97,3 +110,11 @@ git branch -D 브랜치명
  PR 시 충돌이 보통 난다
   1.로컬해결 =>feat에 원격 main(다른 팀원이 올린 것) pull로 당겨온다 =>충돌 해결 후 origin/feat로 push 
   2. ui해결
+
+
+  6-2. 똑같이 돌아가는데 로컬, 원격에서 branch삭제, 이름 바꿔서 만들고 그대로 진행
+
+  처음 clone 받아올 때 
+  git clone --mirror 기존원격레포주소 // 브랜치 이전 이력 싹 다 받아옴 
+  git remote set-url origin
+  git push --mirror
