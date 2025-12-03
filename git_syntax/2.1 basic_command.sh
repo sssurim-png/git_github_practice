@@ -81,16 +81,41 @@ git push origin 태그버전명
 #태그 목록 조회
 git tag
 
-#브랜치 생성
-git branch 브랜치명
-#현재 checkout 되어있는 branch를 기준으로 새로운 branch 생성
-git branch feat/member_list
-#브랜치 목록 조회
-git branch
+
+# 브랜치 생성
+#현재 checkout 되어있는 브랜치를 기준으로 새로운 브랜치 생성
+git branch feat/member/_list    ///feat부터 이름
+#브랜치 목록조회
+git branch 
 #특정 브랜치로 전환
 git checkout 브랜치명
-#브랜치 생성과 전환을 동시에
+#브랜치생성과 전환을 동시에
 git checkout -b 브랜치명
-#로컬 브랜치 삭제(원격은 별도로 삭제)
+#로컬브랜치 삭제(원격은 별도로 삭제)
 git branch -D 브랜치명
- 
+
+
+실습1.
+1.회원가입을 담당
+2.main checkout 및 pull
+3.feat브랜치 생성
+4.commit ID 2개 정도 임의로 생성
+5.origin/feat1에 push (코드 작업 후)
+6.한번 쓴 branch는 가급적 다시 사용하지 말 것   ----------->
+7.PR생성해서 main merge
+//로컬의 main브랜치에서는 작업하지 않는다 main에서 main으로 push하지 않는다. 
+ 사이드 branch에서 원격origin/feat으로 push.
+ 원격 origin/feat에서 원격main branch에 PR로 merge
+
+ PR 시 충돌이 보통 난다
+  1.로컬해결 =>feat에 원격 main(다른 팀원이 올린 것) pull로 당겨온다 =>충돌 해결 후 origin/feat로 push 
+  2. ui해결
+
+
+  6-2. 똑같이 돌아가는데 로컬, 원격에서 branch삭제, 이름 바꿔서 만들고 그대로 진행
+
+  처음 clone 받아올 때 
+  git clone --mirror 기존원격레포주소 // 브랜치 이전 이력 싹 다 받아옴 
+  git remote set-url origin
+  git push --mirror
+
