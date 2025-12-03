@@ -45,3 +45,22 @@ fetch: 원격의 변경사항을 가져오는 것 --> log --all하면 head위에
 git checkout 커밋ID 
 #특정 브랜치로의 전환
 git checkouot 브랜치명
+
+#pull은 원격사항을 local로 내려받는것(fetch+merge)
+git pull origin main
+
+#fetch는 변경사항을 local가져오되, 병합하지 않는 것.
+git fetch origin main
+
+git diff commitID1 commitID2
+
+#commitID간 또는 브랜치 사이의 비교 명령어
+git diff commitID1 commitID2
+git diff 브랜치명1 브랜치명2
+
+#가장 최신의 커밋 취호(head위치)
+git reset head~1
+git reset head
+
+#이미 push commit사항을  되돌리는 새로운 commit 생성 (지워지는 것이 아님)
+git revert 커밋ID
