@@ -33,5 +33,12 @@ merge: '로컬'에 내 변경사항도 포함되어있는 새로운 변경파일
  2.작업사항 저장 후 취소(삭재) => pull => 다시 불러옴 //지금 commit하고 싶지는 않아
 
 
- #git stash
- 삭제하고 pull당겨오고 니꺼 다시 넣어라 였을 때 필요한 함수
+ #git stash 
+ 삭제하고 pull당겨오고 니꺼 다시 넣어라 였을 때 필요한 함수 --이렇게 충돌해결한 것은 merge파일x, fetch한 것에 함수? 더한 것
+
+
+
+ 실무에서는 dev, main 브랜치 이렇게 따로 두는 편이다 (staging = main이랑 거의 비슷한 환경)
+ :main이 실제 운용되고 있는 서비스 임으로 dev에서 테스트 겁나 해보고 괜찮은 시점에 push
+
+ #feature branch =>feat,resister...

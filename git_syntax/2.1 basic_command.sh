@@ -64,3 +64,36 @@ git reset head
 
 #이미 push commit사항을  되돌리는 새로운 commit 생성 (지워지는 것이 아님)
 git revert 커밋ID
+
+
+
+#원격repo에 해당 tag의 release생성
+
+
+# 브랜치 생성
+#현재 checkout 되어있는 브랜치를 기준으로 새로운 브랜치 생성
+git branch feat/member/_list    ///feat부터 이름
+#브랜치 목록조회
+git branch 
+#특정 브랜치로 전환
+git checkout 브랜치명
+#브랜치생성과 전환을 동시에
+git checkout -b 브랜치명
+#로컬브랜치 삭제(원격은 별도로 삭제)
+git branch -D 브랜치명
+
+
+실습1.
+1.회원가입을 담당
+2.main checkout 및 pull
+3.feat브랜치 생성
+4.commit ID 2개 정도 임의로 생성
+5origin/feat1에 push (코드 작업 후)
+6.PR생성해서 main merge
+//로컬의 main브랜치에서는 작업하지 않는다 main에서 main으로 push하지 않는다. 
+ 사이드 branch에서 원격origin/feat으로 push.
+ 원격 origin/feat에서 원격main branch에 PR로 merge
+
+ PR 시 충돌이 보통 난다
+  1.로컬해결 =>feat에 원격 main(다른 팀원이 올린 것) pull로 당겨온다 =>충돌 해결 후 origin/feat로 push 
+  2. ui해결
