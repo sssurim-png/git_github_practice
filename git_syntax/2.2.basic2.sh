@@ -29,5 +29,8 @@ merge: '로컬'에 내 변경사항도 포함되어있는 새로운 변경파일
  - 같은파일 수정: git pull origin main=> 병합파일 -> 수정 -> add commit ->병합 커밋 ->git push origin main  //충돌 수정한 것이기 때문에
 
 #원격에서 당겨올 때
- 1.commit+pull => 충돌 => 해결
+ 1.commit(비교대상인c가 있어야되니까)+pull => 충돌 => 해결
  2.작업사항 저장 후 취소(삭재) => pull => 다시 불러옴 //지금 commit하고 싶지는 않아
+
+
+ #git stash
